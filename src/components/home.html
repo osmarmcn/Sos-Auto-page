@@ -1,0 +1,66 @@
+
+
+<section class="home" id="home">
+    <div class="container-home">
+        <div class="home-content">
+            <h1 class="home-title">Sos-Auto</h1>
+            <p class="home-description">A melhor plataforma para encontrar o serviço mecânico emergencial <span>(bateria, reboque, borracharia)</span> ideal para você!</p>
+            <button class="btn-home">
+                Saiba mais
+            </button>
+           
+
+        </div>
+        <div class="form">
+            <form action="" class="form-content" id="form-content">
+                <h2 class="form-title">Solicite um serviço</h2>
+                <div class="form-group">
+                    <input type="text" id="name" class="form-input" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="localizacao" id="localizacao" class="form-input" placeholder="Digite seu localizacao" required>
+                </div>
+                <div class="form-group">
+                    <select name="servico" id="servico">
+                        <option value="" disabled selected>Selecione o serviço</option>
+                        <option value="pneus">Troca de Pneu</option>
+                        <option value="baterias">Troca de Batéria</option>
+                        <option value="reboque">Chamar Reboque</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensagem" name="mensagem" rows="8" placeholder="Descreva o que aconteceu em poucas palavras, para melhor atendê-lo."></textarea>
+                </div>
+                <div class="termos-container">
+                    <label class="termo">
+                      <input type="checkbox" id="privacidade" name="privacidade" required>
+                      <span>Li e aceito os <a href="#" class="termo-link" data-termo="privacidade">Termos de Privacidade</a>.</span>
+                    </label>
+                    <label class="termo">
+                      <input type="checkbox" id="uso" name="uso" required>
+                      <span>Li e aceito os <a href="#" class="termo-link" data-termo="uso">Termos de Uso</a>.</span>
+                    </label>
+                </div>
+                  
+                  
+
+               <button class="btn-form">Enviar</button>
+
+            </form>
+           
+                
+
+        </div>
+
+        <div class="modal-termo" id="modal-termo">
+            <div class="modal-content">
+              <span class="modal-close" id="modal-close">&times;</span>
+              <h3 id="modal-title">Termos</h3>
+              <div class="modal-body" id="modal-body">
+               
+              </div>
+            </div>
+          </div>
+        
+    </div>
+</section>

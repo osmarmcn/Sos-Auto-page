@@ -1,0 +1,187 @@
+
+.about {
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    padding: 8rem 5%;
+    
+    
+  }
+  
+  .container-about {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  .about-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffb703;
+    margin: 1rem auto 0;
+    border-radius: 4px;
+  }
+  
+  .sobre-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+  
+  .sobre-text {
+    flex: 1 1 50%;
+  }
+  
+  .sobre-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #d1d1d1;
+    margin-bottom: 2rem;
+  }
+  
+  .sobre-text video {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 183, 3, 0.2);
+  }
+  
+  .sobre-list {
+    flex: 1 1 45%;
+  }
+  
+  .sobre-list h3 {
+    font-size: 1.5rem;
+    color: #ffb703;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sobre-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .sobre-list li {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #ccc;
+  }
+  
+  .sobre-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ffb703;
+    font-size: 1rem;
+  }
+  
+  .sobre-list span {
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .sobre-belief {
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+    border-left: 4px solid #ffb703;
+    border-radius: 0.5rem;
+    color: #e0e0e0;
+    font-style: italic;
+  }
+
+  
+  
+
+  @media screen and (max-width: 1150px) {
+    .about  {
+        margin-top: 15rem;
+      }
+    .sobre-content {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .sobre-text,
+    .sobre-list {
+      flex: 1 1 100%;
+    }
+  
+    .sobre-text p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  
+    .sobre-list h3 {
+      font-size: 1.25rem;
+    }
+  
+    .sobre-list li {
+      font-size: 1rem;
+    }
+  
+    .sobre-belief {
+      font-size: 0.95rem;
+      padding: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about {
+      padding: 3rem 1.5rem;
+      margin-top: 0;
+    }
+  
+    .about-title {
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+    }
+  
+    .sobre-text p {
+      font-size: 0.95rem;
+    }
+  
+    .sobre-list h3 {
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  
+    .sobre-list li {
+      font-size: 0.95rem;
+    }
+  
+    .sobre-belief {
+      font-size: 0.9rem;
+    }
+  
+    .sobre-text video {
+      border-radius: 0.75rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .sobre-belief {
+      border-left: 3px solid #ffb703;
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+  
+    .sobre-list li {
+      padding-left: 1.2rem;
+    }
+  
+    .sobre-list li::before {
+      font-size: 0.9rem;
+    }
+  }
+  
