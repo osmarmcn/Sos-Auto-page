@@ -60,8 +60,8 @@ document.querySelectorAll('.termo-link').forEach(link => {
     modalTitle.textContent = tipo === 'uso' ? 'Termos de Uso' : 'Política de Privacidade'
     modalBody.innerHTML = termosConteudo[tipo];
     modal.style.display = 'flex'
-  });
-});
+  })
+})
 
 modalClose.addEventListener('click', () => {
   modal.style.display = 'none'
