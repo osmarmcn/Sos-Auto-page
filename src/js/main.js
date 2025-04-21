@@ -23,4 +23,5 @@ includeHTML('#contact', 'src/components/contact.html').then(() => {
 
 
 
+
 includeHTML('footer', 'src/components/footer.html')
