@@ -29,7 +29,7 @@ if (contatoForm) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(successCallback, errorCallback, { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 });
         } else {
-            // Se a geolocalização não for suportada, usamos o endereço digitado (se houver)
+           
             if (enderecoDigitado) {
                 textoBase += `\nLocalização fornecida: ${enderecoDigitado} (pode ser menos precisa)`;
             } else {
@@ -54,7 +54,7 @@ if (contatoForm) {
 
         function errorCallback(error) {
             console.error("Erro ao obter a localização:", error);
-            // Se a geolocalização falhar, usamos o endereço digitado (se houver)
+           
             if (enderecoDigitado) {
                 textoBase += `\nLocalização fornecida: ${enderecoDigitado} (pode ser menos precisa devido a falha na geolocalização)`;
             } else {

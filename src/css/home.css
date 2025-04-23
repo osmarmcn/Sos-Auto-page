@@ -109,12 +109,14 @@
 }
 
 .form-location-hint {
-    font-size: 0.9rem;
+    font-size: .9rem;
     color:var(var(--text-color));
     margin-bottom: 0.3rem;
-   
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
-    margin-bottom: .5rem;
+    text-align: justify;
+    margin-bottom: .6rem;
+
 }
 
 .form-content .form-group input,
@@ -135,7 +137,7 @@
 .form-content .form-group textarea:focus {
   outline: none;
   border-color: var(--bg-color);
-  box-shadow: 0 0 0 3px rgba(243, 130, 34, 0.3); /* Laranja suave */
+  box-shadow: 0 0 0 3px rgba(243, 130, 34, 0.3); 
 }
 
 .form-content .form-group input::placeholder,
