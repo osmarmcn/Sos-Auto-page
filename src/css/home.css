@@ -108,6 +108,15 @@
   flex-direction: column;
 }
 
+.form-location-hint {
+    font-size: 0.9rem;
+    color:var(var(--text-color));
+    margin-bottom: 0.3rem;
+   
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
 .form-content .form-group input,
 .form-content .form-group select,
 .form-content .form-group textarea {
