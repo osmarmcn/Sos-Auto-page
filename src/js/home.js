@@ -42,14 +42,15 @@ if (contatoForm) {
         }
 
         function successCallback(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-            const textoComLocalizacao = `${textoBase}\nLocalização (aproximada): Latitude: ${latitude}, Longitude: ${longitude}`;
-            const textoCodificado = encodeURIComponent(textoComLocalizacao);
-            const numeroWhatsApp = '558592440059';
-            linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
-            window.open(linkWhatsApp, '_blank');
-        }
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          const googleMapsLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+          const textoComLocalizacao = `${textoBase}\nLocalização (aproximada): Latitude: ${latitude}, Longitude: ${longitude}\nVer no Mapa: ${googleMapsLink}`;
+          const textoCodificado = encodeURIComponent(textoComLocalizacao);
+          const numeroWhatsApp = '558592440059';
+          linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
+          window.open(linkWhatsApp, '_blank');
+      }
 
         function errorCallback(error) {
             console.error("Erro ao obter a localização:", error);
