@@ -1,9 +1,9 @@
+@import 'global.css';
 
 @import 'header.css';
-@import 'global.css';
 @import 'home.css';
 @import 'about.css';
-@import 'service.css';
 @import 'contact.css';
+@import 'service.css';
 @import 'footer.css';
 @import 'alert.css';

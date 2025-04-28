@@ -4,8 +4,9 @@
 .alert-container {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 90%;
     max-width: 400px;
     background-color: white;
@@ -15,8 +16,8 @@
     z-index: 1000;
     opacity: 0;
     animation: fadeIn 0.3s ease forwards;
-  }
-  
+}
+
   .loading-bar {
     position: absolute;
     top: 0;
@@ -66,6 +67,9 @@
     color: #666;
     line-height: 1.4;
   }
+  .hide-alert {
+    animation: fadeOut 0.3s ease forwards;
+  }
   
   @keyframes countdown {
     from {
@@ -79,25 +83,27 @@
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translate(-50%, -20px);
+      transform: translateY(-20px); 
     }
     to {
       opacity: 1;
-      transform: translate(-50%, 0);
+      transform: translateY(0);
     }
   }
   
   @keyframes fadeOut {
-    from {
+    0% {
       opacity: 1;
-      transform: translate(-50%, 0);
+      transform: translateY(0);
     }
-    to {
+    100% {
       opacity: 0;
-      transform: translate(-50%, -20px);
+      transform: translateY(-30px); 
     }
   }
-  
-  .hide-alert {
-    animation: fadeOut 0.3s ease forwards;
+
+  @media screen and (max-width: 480px) {
+    .alert-container {
+      width: 95%;
+    }
   }
