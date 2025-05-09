@@ -88,7 +88,9 @@ const contatoForm = document.getElementById('form-content');
 
             const textoCodificado = encodeURIComponent(textoFinalParaEnviar);
             const numeroWhatsApp = '558592440059'; // Seu número
-            const linkWhatsAppFinal = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`; // Renomeado para evitar conflito com a let global
+
+            const linkWhatsAppFinal = `https://wa.me/${numeroWhatsApp}`; 
+            // const linkWhatsAppFinal = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`; 
             window.open(linkWhatsAppFinal, '_blank');
         }
 
