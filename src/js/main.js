@@ -26,14 +26,15 @@ includeHTML('#contact', 'src/components/contact.html').then(() => {
 includeHTML('#alert', 'src/components/alert.html').then(() => {
   
   import('./alert.js').then(module => {
-    const showAlert = module.default;
+    const showAlert = module.default
     if (typeof showAlert === 'function') {
-      showAlert();
+      showAlert()
     }
   }).catch(error => {
-    console.error('Erro ao carregar o módulo alert.js:', error);
-  });
-});
+    console.error('Erro ao carregar o módulo alert.js:', error)
+  })
+})
+
 
 
 
