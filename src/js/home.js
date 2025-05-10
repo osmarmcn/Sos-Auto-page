@@ -23,15 +23,8 @@ const contatoForm = document.getElementById('form-content');
     }
 
 const servicoTexto = servicoSelect.options[servicoSelect.selectedIndex].text;
-// IMPORTANTE: Definimos textoBase aqui, mas ele será complementado depois.
-// Não o modificaremos diretamente nas funções de callback para evitar efeitos colaterais
-// se as callbacks forem chamadas múltiplas vezes ou em ordens inesperadas.
-// Em vez disso, as callbacks construirão a mensagem final baseada nele.
+
 const textoBaseOriginal = `Olá, me chamo ${nome}.\nQuero solicitar o serviço de: ${servicoTexto}.\nA minha situação é: ${mensagem}`;
-
-// Definindo as funções de callback ANTES de usá-las
-// Isso melhora a legibilidade e evita problemas com hoisting de funções dentro de blocos.
-
 function successCallback(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -89,7 +82,9 @@ function errorCallback(error) {
 
     const textoCodificado = encodeURIComponent(textoFinalParaEnviar);
     const numeroWhatsApp = '558592440059'; // Seu número
-    const linkWhatsAppFinal = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`; // Renomeado para evitar conflito com a let global
+    
+    const linkWhatsAppFinal = `https://wa.me/${numeroWhatsApp}`; 
+    //  const linkWhatsAppFinal = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`; 
     window.open(linkWhatsAppFinal, '_blank');
 }
 
