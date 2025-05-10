@@ -12,6 +12,10 @@ if (navigator.geolocation) {
         },
         (error) => {
             console.warn("Erro ao obter localização:", error.message);
+            const aviso = document.getElementById('aviso-localizacao');
+            if (aviso) {
+                aviso.style.display = 'block';
+            }
         },
         {
             enableHighAccuracy: false,
@@ -66,7 +70,7 @@ if (contatoForm) {
         const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
 
         // Abre link diretamente na ação do clique (para Safari/iOS funcionar corretamente)
-        window.open(linkWhatsApp, '_blank');
+       window.location.href = linkWhatsApp
     });
 }
 
